@@ -17,4 +17,13 @@ public class PullRequestTestWithBrowsers {
 
         $("#search").shouldHave(text("selenide.org"));
     }
+
+    @Test
+    void searchInYandexTest() {
+        open("https://yandex.ru/");
+
+        $("#text").val("selenide").pressEnter();
+
+        $(".link_theme_normal.organic__url", 1).shouldNotHave(text("почта"));
+    }
 }
