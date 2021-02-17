@@ -22,7 +22,7 @@ public class PullRequestTestWithBrowsers {
     void searchInYandexTest() {
         open("https://yandex.ru/");
 
-        $("#text").val("selenide").pressEnter();
+        $("#text").val("mail ru").pressEnter();
 
         $(".link_theme_normal.organic__url", 1).shouldNotHave(text("почта"));
     }
